@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/traveler.css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+<meta name="viewport" content="initial-scale=1">
+
+<script src="js/util/google-maps-init.js"></script>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-route.js"></script>
+<script src="js/lib/angular-animate.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4KA2WAZ2BKf4qrAWPWvfYKen0A0p9gx4&callback=initGoogleMap" async defer></script>
+<script src="js/lib/moment.min.js"></script>
+<script src="js/traveler.js"></script>
+<script src="js/home.js"></script>
+
+</head>
+<body ng-app="traveler" ng-controller="travelerController" layout="column">
+
+	<div class="appheader" layout="row" md-whiteframe="3">
+		<div class="logo" layout="column">
+			<div flex></div>
+			<div class="logo-avatar"><md-icon md-svg-src="images/color/luggage.svg"></md-icon></div>
+			<div flex></div>
+		</div>
+		<div flex layout="column">
+			<div flex></div>
+			<div class="name">Traveler</div>
+			<div flex></div>
+		</div>
+		<div layout="column">
+			<div flex></div>
+			<div class="avatar"><img src="images/avatars/avatar.png"/></div>
+			<div flex></div>
+		</div>
+		<div layout="column">
+			<div flex></div>
+			<div class="menu"><md-icon md-svg-src="images/svg/bars.svg"></md-icon></div>
+			<div flex></div>
+		</div>
+	</div>
+
+	<div id="ng-view" ng-view layout="column" flex></div>
+
+</body>
+</html>
