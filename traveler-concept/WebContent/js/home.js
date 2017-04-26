@@ -28,6 +28,18 @@ homeModule.controller("homeController", [ '$scope', '$http', '$timeout', '$mdDia
 	$scope.init = function() {
 		
 		$scope.loadGoogleMap();
+		$scope.loadStoryline();
+	}
+	
+	$scope.loadStoryline = function() {
+		
+		$scope.storyline = new Object();
+		$scope.storyline.days = [];
+		$scope.storyline.days.push({day: new Date(moment("02/04/2017", "DD/MM/YYYY")), feeds: []})
+		
+//		$scope.storyline.days[0].feeds.push({avatar: 'angelina', who: 'Angelina', where: 'Singapore', type: 'search', from: new Date(moment("01/08/2017", "DD/MM/YYYY"), to: new Date(moment("12/08/2017", "DD/MM/YYYY"))});
+//		$scope.storyline.days[0].feeds.push({avatar: 'ryan', who: 'Ryan', type: 'leaves', where: 'New York', from: new Date(moment("21/07/2017", "DD/MM/YYYY"), to: new Date(moment("28/07/2017", "DD/MM/YYYY"))});
+//		$scope.storyline.days[0].feeds.push({avatar: 'jennifer', who: 'Jennifer', , type: 'tip', tipType: 'food'});
 	}
 	
 	/**

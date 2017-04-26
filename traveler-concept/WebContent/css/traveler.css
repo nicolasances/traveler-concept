@@ -9,21 +9,39 @@
 .appheader .menu {margin: 0 24px;}
 .appheader .menu md-icon {fill: white;}
 
-#timeline {max-width: 25%; min-width: 25%; border-right: 1px solid #80CBC4; padding: 12px; background-color: white; position: relative;}
+#timeline {max-width: 25%; min-width: 25%; padding: 12px; position: relative; margin: 0 5%;}
 #timeline .line {background-image: url(../images/png/dot-grey.png); position: absolute; height: 90%; width: 31px; background-size: 6px; background-repeat: repeat-y; background-position: 50%; margin-top: 12px;}
-#timeline .date {margin: 12px 0; position: relative; background-color: white; z-index: 2;}
+#timeline .date {margin: 12px 0; position: relative; z-index: 2;}
 #timeline .date .icon {}
 #timeline .date .icon md-icon {width: 38px; height: 38px;}
 #timeline .date .day {position: absolute; top: 15px; left: 10px;}
 #timeline .item {z-index: 2; margin: 12px 0;}
+#timeline .item .time {font-size: 0.7em;}
 #timeline .item .avatar {}
 #timeline .item .avatar img {width: 32px; height: 32px; border-radius: 50%;}
-#timeline .item .text {color: #004D40; font-size: 0.9em; background-color: #B2DFDB; padding: 12px; border-radius: 5px; margin: 0 12px;}
+#timeline .item .info {margin-left: 12px; background-color: #B2DFDB; color: #004D40; border-radius: 5px; padding: 6px;}
+#timeline .item .info .icon {padding: 0 12px; margin-right: 12px; border-right: 1px solid #80CBC4;}
+#timeline .item .info .icon md-icon {}
+#timeline .item .info .text {font-size: 0.9em; }
+#timeline .item .dates {margin: 0 12px;}
+#timeline .item .dates .date {}
+#timeline .item .dates .date .day {position: initial; font-size: 1.2em;}
+#timeline .item .dates .date .month {text-transform: uppercase; font-size: 0.6em;}
+#timeline .item .dates .icon {padding: 0; margin: 0 3px; border: none;}
+#timeline .item .dates .icon md-icon {}
+#timeline .item .actions {}
+#timeline .item .actions .action {background-color: #4DB6AC; border-radius: 50%; padding: 5px 7px; width: 32px; height: 32px; box-sizing: border-box;}
+#timeline .item .actions .action md-icon {width: 18px; height: 18px;}
 
-#map {padding: 12px; min-height: 400px;}
-#map #mapdiv {width: 100%; background-color: #EEEEEE; height: 400px; border-bottom: 1px solid #D6D6D6; border-radius: 5px;}
+#map {padding: 12px; min-height: 320px;}k
+#map #mapdiv {width: 70%; background-color: #EEEEEE; height: 320px; border-bottom: 1px solid #D6D6D6; border-radius: 3px;}
 
-#links {}
+#links {margin: 0 9px;}
+#links .link {background-color: #B2DFDB; padding: 24px; margin: 0 3px; border-radius: 3px; min-width: 320px;}
+#links .link .icon {}
+#links .link .icon md-icon {width: 72px; height: 72px;}
+#links .link .text {margin-left: 24px; color: rgba(0,0,0,0.75); font-size: 1.3em; text-align: center; text-transform: uppercase;}
+
 
 /******************************************************************************************************************
  * RESPONSIVE
