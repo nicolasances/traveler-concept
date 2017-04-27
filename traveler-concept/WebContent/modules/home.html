@@ -1,108 +1,136 @@
 
-<div layout="row" flex style="background-color: white;">
-	<div id="timeline" layout="column" >
-		<div class="line"></div>
-		<div class="date">
-			<div class="icon"><md-icon md-svg-src="images/svg/calendar-empty.svg"></md-icon></div>
-			<div class="day">12</div>
-			<div class="month">Apr</div>
-		</div>
-		<div class="item" layout="row">
-			<div layout="column">
-				<div flex></div>
-				<div class="avatar"><img src="images/avatars/ryan.png" md-whiteframe="1"/></div>
-				<div flex></div>
-			</div>
-			<div layout="column">
-				<div flex></div>
-				<div class="time">12 Apr 16:30</div>
-				<div class="info" md-whiteframe="1" layout="row">
-					<div class="icon" layout="column">
-						<div flex></div>
-						<md-icon md-svg-src="images/svg/rented-house.svg"></md-icon>
-						<div flex></div>
-					</div>
-					<div layout="column">
-						<div layout="row">
-							<div layout="column">
-								<div flex></div>
-								<div class="text">Ryan is <b>leaving</b> his aparment in <b>New York</b>!</div>
-								<div flex></div>
-							</div>
-							<div class="dates" layout="row">
-								<div class="date" layout="column"><div class="day">12</div><div class="month">Aug</div></div>
-								<div class="icon" layout="column">
-									<div flex></div>
-									<md-icon md-svg-src="images/svg/arrow-right.svg"></md-icon>
-									<div flex></div>
-								</div>
-								<div class="date" layout="column"><div class="day">12</div><div class="month">Aug</div></div>
-							</div>
-						</div>
-						<div class="actions" layout="row">
-							<div class="action"><md-icon md-svg-src="images/svg/binoculars.svg"></md-icon></div>
-						</div>
-					</div>
-				</div>
-				<div flex></div>
-			</div>
-		</div>
-		<div class="item" layout="row">
-			<div layout="column">
-				<div flex></div>
-				<div class="avatar"><img src="images/avatars/angelina.png" md-whiteframe="1"/></div>
-				<div flex></div>
-			</div>
-			<div layout="column">
-				<div flex></div>
-				<div class="time">12 Apr. 12:30</div>
-				<div class="text" md-whiteframe="1">Angelina's aparment will be <b>free</b> in <b>August</b>!</div>
-				<div flex></div>
-			</div>
-		</div>
-		<div class="item" layout="row">
-			<div layout="column">
-				<div flex></div>
-				<div class="avatar"><img src="images/avatars/jennifer.png" md-whiteframe="1"/></div>
-				<div flex></div>
-			</div>
-			<div layout="column">
-				<div flex></div>
-				<div class="time">12 Apr. 6:12</div>
-				<div class="text" md-whiteframe="1">Jennifer is <b>looking</b> for an apartment in <b>July</b>!</div>
-				<div flex></div>
-			</div>
-		</div>
-	</div>
-	<div layout="column" flex>
+<div layout="row" flex>
+	<div id="sideinfo" layout="column" flex>
 		<div id="map">
 			<div id="mapdiv" class="map-container" layout="row" flex md-whiteframe="3"></div>
 		</div>
-		<div id="links" layout="row">
-			<div class="link" layout="row" md-whiteframe="1">
-				<div class="icon"><md-icon md-svg-src="images/svg/map.svg"></md-icon></div>
-				<div layout="column" flex>
+		<div class="tbd" flex>AREA TO BE DEFINED</div>
+	</div>
+	<div id="social" layout="column" flex>
+		<div layout="row">
+			<div flex></div>
+			<div id="me" layout="row" md-whiteframe="3">
+				<div class="line"></div>
+				<div layout="column">
 					<div flex></div>
-					<div class="text">Plan<br/> your next trip!</div>
+					<div class="avatar"><img src="images/avatars/avatar.png"/></div>
+					<div flex></div>
+				</div>
+				<div layout="column">
+					<div flex></div>
+						<div class="action" layout="column">
+							<div layout="row">
+								<div flex></div>
+								<div class="button" layout="row" md-whiteframe="2">
+									<div flex></div>
+									<div layout="column">
+										<div flex></div>
+										<md-icon md-svg-src="images/svg/binoculars.svg"></md-icon>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div flex></div>
+							</div>
+							<div class="text">Looking for a place</div>
+						</div>
+					<div flex></div>
+				</div>
+				<div layout="column">
+					<div flex></div>
+						<div class="action" layout="column">
+							<div layout="row">
+								<div flex></div>
+								<div class="button" layout="row" md-whiteframe="2">
+									<div flex></div>
+									<div layout="column">
+										<div flex></div>
+										<md-icon md-svg-src="images/svg/rented-house.svg"></md-icon>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div flex></div>
+							</div>
+							<div class="text">My house is free</div>
+						</div>
+					<div flex></div>
+				</div>
+				<div layout="column">
+					<div flex></div>
+						<div class="action" layout="column">
+							<div layout="row">
+								<div flex></div>
+								<div class="button" layout="row" md-whiteframe="2">
+									<div flex></div>
+									<div layout="column">
+										<div flex></div>
+										<md-icon md-svg-src="images/svg/pen.svg"></md-icon>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div flex></div>
+							</div>
+							<div class="text">I have some tips</div>
+						</div>
 					<div flex></div>
 				</div>
 			</div>
-			<div class="link" layout="row" md-whiteframe="1">
-				<div class="icon"><md-icon md-svg-src="images/svg/eiffel-tower.svg"></md-icon></div>
-				<div layout="column" flex>
-					<div flex></div>
-					<div class="text">Our <br/>City guides</div>
-					<div flex></div>
+			<div flex></div>
+		</div>
+		<div id="timeline" layout="column" >
+			<div class="line"></div>
+			<div class="date-group" ng-repeat="day in storyline.days">
+				<div class="date">
+					<div class="icon"><md-icon md-svg-src="images/svg/calendar-empty.svg"></md-icon></div>
+					<div class="day">{{day.day | date : 'd'}}</div>
+					<div class="month">{{day.day | date : 'MMM'}}</div>
 				</div>
-			</div>
-			<div class="link" layout="row" md-whiteframe="1">
-				<div class="icon"><md-icon md-svg-src="images/svg/network.svg"></md-icon></div>
-				<div layout="column" flex>
-					<div flex></div>
-					<div class="text">The <br/>Community</div>
-					<div flex></div>
+				<div class="item" layout="row" ng-repeat="feed in day.feeds">
+					<div layout="column">
+						<div class="avatar"><img src="images/avatars/{{feed.avatar}}.png" md-whiteframe="1"/></div>
+					</div>
+					<div layout="column">
+						<div class="time">{{day.day | date : 'd MMM'}} 16:30</div>
+						<div flex></div>
+						<div class="info" md-whiteframe="1" layout="row" ng-click="feed.showMenu = !feed.showMenu">
+							<div class="icon" layout="column">
+								<div flex></div>
+								<md-icon ng-if="feed.type == 'leaves'" md-svg-src="images/svg/rented-house.svg"></md-icon>
+								<md-icon ng-if="feed.type == 'search'" md-svg-src="images/svg/binoculars.svg"></md-icon>
+								<div flex></div>
+							</div>
+							<div layout="row">
+								<div layout="column">
+									<div flex></div>
+									<div class="text" ng-if="feed.type == 'leaves'">{{feed.who}} is <b>leaving</b> his aparment in <b>{{feed.where}}</b>!</div>
+									<div class="text" ng-if="feed.type == 'search'">{{feed.who}} is <b>searching</b> for an aparment in <b>{{feed.where}}</b>!</div>
+									<div flex></div>
+								</div>
+								<div class="dates" layout="row">
+									<div class="date" layout="column"><div class="day">{{feed.from | date : 'd'}}</div><div class="month">{{feed.from | date : 'MMM'}}</div></div>
+									<div class="icon" layout="column">
+										<div flex></div>
+										<md-icon md-svg-src="images/svg/arrow-right.svg"></md-icon>
+										<div flex></div>
+									</div>
+									<div class="date" layout="column"><div class="day">{{feed.to | date : 'd'}}</div><div class="month">{{feed.to | date : 'MMM'}}</div></div>
+								</div>
+							</div>
+						</div>
+						<div class="actions" layout="row" ng-if="feed.showMenu">
+							<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/binoculars.svg"></md-icon></div>
+							<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/contact.svg"></md-icon></div>
+							<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/followup.svg"></md-icon></div>
+						</div>
+						<div flex></div>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="tbd">
+		AREA TO BE DEFINED
 	</div>
 </div>
