@@ -4,12 +4,12 @@ var map;
 
 initMap = function() {
 	var styles = [
-	  {"featureType": "administrative.country", "elementType": "labels", "stylers": [{ "color": "#EEEEEE" }, { "visibility": "off" }]},
-	  {"featureType": "administrative.province", "elementType": "labels", "stylers": [{ "color": "#EEEEEE" }, { "visibility": "off" }]},
-	  {"featureType": "administrative.country", "elementType": "geometry.stroke", "stylers": [{ "color": "#9b9b9b" }]}, 
-	  {"elementType": "labels.text.fill", stylers: [{"color": "#606060"}]}, 
-	  {"featureType": "road", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}
-	];
+	              {"featureType": "administrative.country", "elementType": "labels", "stylers": [{ "color": "#EEEEEE" }, { "visibility": "off" }]},
+	              {"featureType": "administrative.province", "elementType": "labels", "stylers": [{ "color": "#EEEEEE" }, { "visibility": "off" }]},
+	              {"featureType": "administrative.country", "elementType": "geometry.stroke", "stylers": [{ "color": "#9b9b9b" }]}, 
+	              {"elementType": "labels.text.fill", stylers: [{"color": "#606060"}]}, 
+	              {"featureType": "road", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}
+	              ];
 	
 	map = new google.maps.Map(document.getElementById('mapdiv'), {
 	    center: {lat: 19.475757, lng: 9.168083},
@@ -41,7 +41,21 @@ homeModule.controller("homeController", [ '$scope', '$http', '$timeout', '$mdDia
 		$scope.storyline.days[0].feeds.push({avatar: 'ryan', who: 'Ryan', type: 'leaves', where: 'New York', from: new Date(moment("21/07/2017", "DD/MM/YYYY")), to: new Date(moment("28/07/2017", "DD/MM/YYYY")), showMenu: false});
 		$scope.storyline.days[0].feeds.push({avatar: 'angelina', who: 'Angelina', type: 'search', where: 'Singapore', from: new Date(moment("03/08/2017", "DD/MM/YYYY")), to: new Date(moment("28/08/2017", "DD/MM/YYYY")), showMenu: false});
 		
+		$scope.storyline.days[1].feeds.push({avatar: 'reynolds', who: 'Reynold', type: 'tip', where: 'Miami', preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat', showMenu: false});
 		$scope.storyline.days[1].feeds.push({avatar: 'jennifer', who: 'Jennifer', type: 'search', where: 'New York', from: new Date(moment("02/07/2017", "DD/MM/YYYY")), to: new Date(moment("15/07/2017", "DD/MM/YYYY")), showMenu: false});
+		
+		$timeout(function() {
+			if (googleMaps.ready) {
+				$scope.ryanMap = new google.maps.Map(document.getElementById('ryan-map'), {
+					center: {lat: 40.740888, lng: -73.989274},
+					zoom: 15,
+					scrollwheel: false, 
+					streetViewControl: false,
+					mapTypeControl: false
+				});
+				
+			}
+		}, 300);
 	}
 	
 	/**

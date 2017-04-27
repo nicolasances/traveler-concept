@@ -10,35 +10,38 @@
 .appheader .menu md-icon {fill: white;}
 
 #social {padding: 12px;}
-#social #timeline {position: relative;}
-#social #timeline .line {background-image: url(../images/png/dot-grey.png); position: absolute; height: 90%; width: 37px; background-size: 6px; background-repeat: repeat-y; background-position: 50%; margin-top: 12px;}
-#social #timeline .date {position: relative; z-index: 2;}
-#social #timeline .date .icon {}
-#social #timeline .date .icon md-icon {width: 52px; height: 52px; margin-left: -6px; background-color: white;}
-#social #timeline .date .day {width: 20px; text-align: center; position: absolute; top: 19px; left: 9px;}
-#social #timeline .date .month {position: absolute; top: 37px; font-size: 0.6em; text-transform: uppercase; left: 10px;}
-#social #timeline .item {z-index: 2; margin: 24px 0;}
-#social #timeline .item .time {font-size: 0.7em; margin-left: 24px; margin-bottom: 3px;s}
-#social #timeline .item .avatar {z-index: 2; margin-top: 30px;}
-#social #timeline .item .avatar img {width: 40px; height: 40px; border-radius: 50%;}
-#social #timeline .item .info {outline: none; margin-left: 24px; background-color: #B2DFDB; color: #004D40; border-radius: 5px; padding: 6px;}
-#social #timeline .item .info .icon {padding: 0 12px; margin-right: 12px; border-right: 1px solid #80CBC4;}
-#social #timeline .item .info .icon md-icon {}
-#social #timeline .item .info .text {font-size: 0.9em; }
-#social #timeline .item .dates {margin: 0 12px;}
-#social #timeline .item .dates .date {}
-#social #timeline .item .dates .date .day {position: initial; font-size: 1.2em;}
-#social #timeline .item .dates .date .month {text-transform: uppercase; font-size: 0.6em; position: initial;}
-#social #timeline .item .dates .icon {padding: 0; margin: 0 3px; border: none;}
-#social #timeline .item .dates .icon md-icon {}
-#social #timeline .item .actions {margin: 6px 0 0 24px;}
-#social #timeline .item .actions .action {margin: 6px; background-color: #4DB6AC; border-radius: 50%; padding: 5px 7px; width: 32px; height: 32px; box-sizing: border-box;}
-#social #timeline .item .actions .action md-icon {width: 18px; height: 18px;}
+#social #timeline .community {margin-top: -77px; min-height: 82px;}
+#social #timeline .community .icon {width: 32px; padding: 24px; border-radius: 50%; background-color: #B2DFDB;}
+#social #timeline .community .icon md-icon {width: 32px; height: 32px;}
+#social #timeline .community .text {text-align: center; font-size: 0.8em; margin-top: 6px;}
+#social #timeline {margin-left: 24px;}
+#social #timeline .feeds {margin-left: 22px; margin-top: 24px;}
+#social #timeline .feeds .line {margin-top: -24px; background-image: url(../images/png/dot-grey.png); position: absolute; height: 80%; width: 37px; background-size: 6px; background-repeat: repeat-y; background-position: 50%;}
+#social #timeline .feeds .date {}
+#social #timeline .feeds .date .icon {}
+#social #timeline .feeds .date .icon md-icon {}
+#social #timeline .feeds .date .day {}
+#social #timeline .feeds .date .month {}
+#social #timeline .feeds .item {z-index: 2; margin: 12px 0; max-width: 90%;}
+#social #timeline .feeds .item .time {font-size: 0.7em; margin-left: 24px; margin-bottom: 3px;s}
+#social #timeline .feeds .item .avatar {z-index: 2; margin-top: 19px;}
+#social #timeline .feeds .item .avatar img {width: 40px; height: 40px; border-radius: 50%;}
+#social #timeline .feeds .item .info {width: 100%; outline: none; margin-left: 24px; background-color: #B2DFDB; color: #004D40; border-radius: 5px; padding: 6px;}
+#social #timeline .feeds .item .info .icon {padding: 0 12px; margin-right: 12px; border-right: 1px solid #80CBC4;}
+#social #timeline .feeds .item .info .icon md-icon {}
+#social #timeline .feeds .item .info .text {font-size: 0.9em; }
+#social #timeline .feeds .item .dates {margin: 0 12px 0 24px;}
+#social #timeline .feeds .item .dates .date {}
+#social #timeline .feeds .item .dates .date .day {position: initial; font-size: 1.2em;}
+#social #timeline .feeds .item .dates .date .month {text-transform: uppercase; font-size: 0.6em; position: initial;}
+#social #timeline .feeds .item .dates .icon {padding: 0; margin: 0 3px; border: none;}
+#social #timeline .feeds .item .dates .icon md-icon {}
+#social #timeline .feeds .item .actions {margin: 6px 0 0 24px;}
+#social #timeline .feeds .item .actions .action {margin: 6px; background-color: #4DB6AC; border-radius: 50%; padding: 5px 7px; width: 32px; height: 32px; box-sizing: border-box;}
+#social #timeline .feeds .item .actions .action md-icon {width: 18px; height: 18px;}
+#social #timeline .feeds .item .address-map {width: 100%; height: 150px; margin-left: 24px; margin-top: 6px; border-radius: 5px;}
+#social #timeline .feeds .item .tip {width: 100%; margin-left: 24px; margin-top: 6px; border-radius: 5px; background-color: #E0F2F1; padding: 12px; box-sizing: border-box; font-size: 0.9em;}
 
-#social .community {margin-top: 12px;}
-#social .community .icon {width: 32px; padding: 24px; border-radius: 50%; background-color: #B2DFDB;}
-#social .community .icon md-icon {width: 32px; height: 32px;}
-#social .community .text {text-align: center; font-size: 0.8em; margin-top: 6px;}
 #social #me {padding: 0 12px; border-radius: 3px; min-height: 100px; position: relative; color: rgba(0,0,0,0.87);}
 #social #me .line {background-image: url(../images/png/dot-grey.png); position: absolute; width: 78%; margin-left: 24px; height: 83%; background-size: 5px; background-repeat: repeat-x; background-position: 50%;}
 #social #me .avatar {margin: 0 12px; z-index: 2;}
