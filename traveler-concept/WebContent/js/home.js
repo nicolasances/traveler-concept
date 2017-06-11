@@ -23,12 +23,24 @@ initMap = function() {
 	
 }
 
-homeModule.controller("homeController", [ '$scope', '$http', '$timeout', '$mdDialog', '$mdSidenav', function($scope, $http, $timeout, $mdDialog, $mdSidenav) {
+homeModule.controller("homeController", [ '$scope', '$http', '$timeout', '$interval', '$mdDialog', '$mdSidenav', function($scope, $http, $timeout, $interval, $mdDialog, $mdSidenav) {
 
 	$scope.init = function() {
 		
 		$scope.loadGoogleMap();
 		$scope.loadStoryline();
+		
+		$scope.loadGoogleUserProfileTimer = $interval($scope.loadGoogleUserProfile, 500);
+	}
+	
+	$scope.loadGoogleUserProfile = function() {
+		
+		if (auth2 != null) {
+			
+			$interval.cancel($scope.loadGoogleUserProfileTimer);
+			
+			document.querySelector('#homeSocialProfilePicture').src = googleUser.getBasicProfile().getImageUrl();
+		}
 	}
 	
 	$scope.loadStoryline = function() {
@@ -53,6 +65,8 @@ homeModule.controller("homeController", [ '$scope', '$http', '$timeout', '$mdDia
 					streetViewControl: false,
 					mapTypeControl: false
 				});
+				
+				new google.maps.Marker({position: {lat: 40.740888, lng: -73.989274 }, map: $scope.ryanMap});
 				
 			}
 		}, 300);
