@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" href="css/traveler.css" />
 <link rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" href="css/rentals.css" />
+<link rel="stylesheet" href="css/form.css" />
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
@@ -21,6 +23,8 @@
 <script src="js/traveler.js"></script>
 <script src="js/home.js"></script>
 <script src="js/login.js"></script>
+<script src="js/rentals.js"></script>
+<script src="js/services/GoogleService.js"></script>
 
 </head>
 <body ng-app="traveler" ng-controller="travelerController" layout="column" >
@@ -47,8 +51,95 @@
 			<div flex></div>
 		</div>
 	</div>
+	
+	
+	<div layout="row">
+		<div id="sideinfo" layout="column" flex>
+			<div id="map">
+				<div id="mapdiv" class="map-container" layout="row" flex md-whiteframe="3"></div>
+			</div>
+			<div class="tbd" flex>AREA TO BE DEFINED</div>
+		</div>
+		<div id="social" layout="column" flex>
+			<div layout="row">
+				<div flex></div>
+				<div id="me" layout="row" md-whiteframe="3">
+					<div class="line"></div>
+					<div layout="column">
+						<div flex></div>
+						<div class="avatar"><img id="homeSocialProfilePicture" src=""/></div>
+						<div flex></div>
+					</div>
+					<div layout="column">
+						<div flex></div>
+							<div class="action" layout="column">
+								<div layout="row">
+									<div flex></div>
+									<div class="button" layout="row" md-whiteframe="2">
+										<div flex></div>
+										<div layout="column">
+											<div flex></div>
+											<md-icon md-svg-src="images/svg/binoculars.svg"></md-icon>
+											<div flex></div>
+										</div>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div class="text">Looking for a place</div>
+							</div>
+						<div flex></div>
+					</div>
+					<div layout="column">
+						<div flex></div>
+							<div class="action" layout="column">
+								<div layout="row">
+									<div flex></div>
+									<div class="button" layout="row" md-whiteframe="2" ng-click="go('/me/rentals/new')">
+										<div flex></div>
+										<div layout="column">
+											<div flex></div>
+											<md-icon md-svg-src="images/svg/rented-house.svg"></md-icon>
+											<div flex></div>
+										</div>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div class="text">My house is free</div>
+							</div>
+						<div flex></div>
+					</div>
+					<div layout="column">
+						<div flex></div>
+							<div class="action" layout="column">
+								<div layout="row">
+									<div flex></div>
+									<div class="button" layout="row" md-whiteframe="2">
+										<div flex></div>
+										<div layout="column">
+											<div flex></div>
+											<md-icon md-svg-src="images/svg/pen.svg"></md-icon>
+											<div flex></div>
+										</div>
+										<div flex></div>
+									</div>
+									<div flex></div>
+								</div>
+								<div class="text">I have some tips</div>
+							</div>
+						<div flex></div>
+					</div>
+				</div>
+				<div flex></div>
+			</div>
+			<div id="ng-view" ng-view  style="background-color: white;"></div>
+		</div>
+		<div id="tbd">
+			AREA TO BE DEFINED
+		</div>
+	</div>
 
-	<div id="ng-view" ng-view  style="background-color: white;"></div>
 
 </body>
 </html>

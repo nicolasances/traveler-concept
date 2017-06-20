@@ -2,7 +2,7 @@
 var auth2;
 var googleUser;
 
-var travelerModule = angular.module("traveler", [ "ngRoute", "ngMaterial", "homeModule", "loginModule"])
+var travelerModule = angular.module("traveler", [ "ngRoute", "ngMaterial", "homeModule", "loginModule", "rentalsModule"])
 .controller("travelerController", function($scope, $route, $location, $mdMedia, $mdSidenav, $rootScope) {
 	
 	$scope.go = function(path) {
@@ -48,8 +48,9 @@ var travelerModule = angular.module("traveler", [ "ngRoute", "ngMaterial", "home
 })
 .config(function($httpProvider, $routeProvider, $locationProvider) {
 
-	$routeProvider	.when('/', {templateUrl : 'modules/home.html', controller : 'homeController'})
+	$routeProvider	.when('/', {templateUrl : 'modules/timeline.html', controller : 'homeController'})
 					.when('/login', {templateUrl : 'modules/login.html', controller : 'loginController'})
+					.when('/me/rentals/new', {templateUrl : 'modules/me/rentals/rental-new.html', controller : 'rentalsNewController'})
 					;
 
 });

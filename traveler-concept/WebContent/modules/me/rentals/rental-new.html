@@ -1,0 +1,57 @@
+
+<div class="form">
+	
+	<div class="title">Are you ready to rent your house?</div>
+	
+	<div class="navigator" layout="row" flex>
+		<div flex></div>
+		<div class="step{{currentStep == 1 ? ' current' : ''}} flex" layout="column" flex>
+			<div class="icon-container" layout="column">
+				<div flex></div>
+				<md-icon md-svg-src="images/svg/world-pin.svg"></md-icon>
+				<div flex></div>
+			</div>
+			<div class="text">1. Pin your house</div>
+		</div>
+		<div class="step{{currentStep == 2 ? ' current' : ''}} flex" layout="column" flex>
+			<div class="icon-container" layout="column">
+				<div flex></div>
+				<md-icon md-svg-src="images/svg/calendar-check.svg"></md-icon>
+				<div flex></div>
+			</div>
+			<div class="text">2. Choose when</div>
+		</div>
+		<div class="step{{currentStep == 3 ? ' current' : ''}} flex" layout="column" flex>
+			<div class="icon-container" layout="column">
+				<div flex></div>
+				<md-icon md-svg-src="images/svg/pen.svg"></md-icon>
+				<div flex></div>
+			</div>
+			<div class="text">3. Give additional information</div>
+		</div>
+		<div flex></div>
+	</div>
+	
+	<div ng-if="currentStep == 1">
+		
+		<div class="search-with-lookup-button" layout="row">
+			<div class="search" flex>
+				<input type="text" id="address" ng-model="house.address"/>
+				<md-icon md-svg-src="images/svg/search.svg" ng-click="searchAddress()"></md-icon>
+				<div class="results" ng-if="addresses.length > 0" flex>
+					<div class="result" ng-repeat="address in addresses" ng-click="selectAddress(address)">
+						{{address.name}}
+					</div>
+				</div>
+			</div>
+			<div class="lookup-button" layout="column" md-whiteframe="1">
+				<div flex></div>
+				Pick from your houses
+				<div flex></div>
+			</div>
+		</div>
+		<div id="pinHomeMap" class="address-map" style="min-height: 200px;"></div>
+		
+	</div>
+	
+</div>

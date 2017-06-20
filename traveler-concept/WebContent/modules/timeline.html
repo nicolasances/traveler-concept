@@ -1,0 +1,64 @@
+
+<div id="timeline" layout="column" >
+	<div class="community" layout="column">
+		<div class="icon"><md-icon md-svg-src="images/svg/community.svg"></md-icon></div>
+	</div>
+	<div class="feeds">
+		<div class="line"></div>
+		<div class="date-group" ng-repeat="day in storyline.days">
+<!-- 			<div class="date"> -->
+<!-- 				<div class="icon"><md-icon md-svg-src="images/svg/calendar-empty.svg"></md-icon></div> -->
+<!-- 				<div class="day">{{day.day | date : 'd'}}</div> -->
+<!-- 				<div class="month">{{day.day | date : 'MMM'}}</div> -->
+<!-- 			</div> -->
+			<div class="item" layout="row" ng-repeat="feed in day.feeds">
+				<div layout="column">
+					<div class="avatar"><img src="images/avatars/{{feed.avatar}}.png" md-whiteframe="1"/></div>
+				</div>
+				<div layout="column">
+					<div class="time">{{day.day | date : 'd MMM'}} 16:30</div>
+					<div class="info" md-whiteframe="1" layout="row" ng-click="feed.showMenu = !feed.showMenu">
+						<div class="icon" layout="column">
+							<div flex></div>
+							<md-icon ng-if="feed.type == 'leaves'" md-svg-src="images/svg/rented-house.svg"></md-icon>
+							<md-icon ng-if="feed.type == 'search'" md-svg-src="images/svg/binoculars.svg"></md-icon>
+							<md-icon ng-if="feed.type == 'tip'" md-svg-src="images/svg/pen.svg"></md-icon>
+							<div flex></div>
+						</div>
+						<div layout="row" flex>
+							<div layout="column" flex>
+								<div flex></div>
+								<div class="text" ng-if="feed.type == 'leaves'">{{feed.who}} is <b>leaving</b> his aparment in <b>{{feed.where}}</b>!</div>
+								<div class="text" ng-if="feed.type == 'search'">{{feed.who}} is <b>searching</b> for an aparment in <b>{{feed.where}}</b>!</div>
+								<div class="text" ng-if="feed.type == 'tip'">{{feed.who}} has written a <b>tip</b> on <b>{{feed.where}}</b>!</div>
+								<div flex></div>
+							</div>
+							<div class="dates" layout="row">
+								<div class="date" layout="column"><div class="day">{{feed.from | date : 'd'}}</div><div class="month">{{feed.from | date : 'MMM'}}</div></div>
+								<div class="icon" layout="column">
+									<div flex></div>
+									<md-icon md-svg-src="images/svg/arrow-right.svg"></md-icon>
+									<div flex></div>
+								</div>
+								<div class="date" layout="column"><div class="day">{{feed.to | date : 'd'}}</div><div class="month">{{feed.to | date : 'MMM'}}</div></div>
+							</div>
+						</div>
+					</div>
+					<div layout="column" ng-if="feed.type == 'leaves'">
+						<div class="address-map" id="ryan-map" md-whiteframe="1">
+						</div>
+					</div>
+					<div layout="column" ng-if="feed.type == 'tip'">
+						<div class="tip" md-whiteframe="1">{{feed.preview}}</div>
+					</div>
+					<div class="actions" layout="row" ng-if="feed.type != 'tip'">
+						<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/binoculars.svg"></md-icon></div>
+						<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/contact.svg"></md-icon></div>
+						<div class="action" md-whiteframe="2"><md-icon md-svg-src="images/svg/followup.svg"></md-icon></div>
+					</div>
+					<div flex></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+
+.form {padding-top: 32px;}
+
+.form .title {font-size: 1.4em; text-align: center; margin-bottom: 32px;}
+
+/************************************************************************************
+ * NAVIGATOR
+ ***********************************************************************************/
+.form .navigator {}
+.form .navigator .step {}
+.form .navigator .step .num {text-align: center; font-size: 1.6em;}
+.form .navigator .step .text {font-size: 1.2em; text-align: center;}
+.form .navigator .step .icon-container {background-color: #E0F2F1; border-radius: 50%; text-align: center; width: 92px; height: 92px; margin: auto; margin-bottom: 12px;}
+.form .navigator .step .icon-container md-icon {height: 32px; width: 32px; opacity: 0.5;}
+
+.form .navigator .step.current .icon-container {background-color: #80CBC4;}
+.form .navigator .step.current .icon-container md-icon {opacity: 1;}
+
+/************************************************************************************
+ * SEARCH 
+ ***********************************************************************************/
+.form .search-with-lookup-button {margin: 12px 0;}
+.form .search-with-lookup-button .search {position: relative;}
+.form .search-with-lookup-button .search input[type='text']{width: 100%; padding: 6px; box-sizing: border-box; font-size: 1.2em; color: rgba(0,0,0,0.7);}
+.form .search-with-lookup-button .search md-icon {position: absolute; right: 6px; top: 6px;}
+.form .search-with-lookup-button .lookup-button {max-height: 40px; margin-left: 12px; background-color: #E0F2F1; text-align: center; box-sizing: border-box; font-size: 0.9em; padding: 0 12px;color: rgba(0,0,0,0.7);}
+.form .search-with-lookup-button .results {border: 1px solid #BCBCBC; margin-top: -1px; padding: 0 6px; position: absolute; width: 100%; z-index: 2; background-color: white;}
+.form .search-with-lookup-button .results .result {color: rgba(0,0,0,0.6); margin: 12px 0;}
